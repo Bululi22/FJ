@@ -1,22 +1,26 @@
 <div class="posiciones">
-    @if (textoEnArray.length > 0) {
+    
     <div class="caja">
-        <div class="cajaTexto" (keydown)="onKeyDown($event)">
-            <span 
-                *ngFor="let letra of textoEnArray.slice(0, 15); let i=index "
-                [ngClass]="{'primeraLetra': i === 0}"
-            >
-                {{ letra }}
-            </span>
-            @if (textoEnArray.length === 0) {
-                <span>&nbsp;</span>
-            }
-        </div>
+        @if (textoEnArray.length > 0) {
+            <div class="cajaTexto" (keydown)="onKeyDown($event)">
+                <span 
+                    *ngFor="let letra of textoEnArray.slice(0, 15); let i=index "
+                    [ngClass]="{'primeraLetra': i === 0}"
+                >
+                    {{ letra }}
+                </span>
+                @if (textoEnArray.length === 0) {
+                    <span>&nbsp;</span>
+                }
+            </div>
+        }
+        @else {
+            <div class="cajaTexto">
+                <p class="primeraLetra">COMPLETADO:)</p>
+            </div>
+        }
     </div>
-    }
-    @else {
-        <p>Mu bien</p>
-    }
+    
     <app-teclado [primeraLetraTexto]="textoEnArray[0]"></app-teclado>
-    <app-manos [arrayDeTexto]="textoEnArray"></app-manos>    
+    <app-manos [primeraLetraTexto]="textoEnArray[0]"></app-manos>    
 </div>

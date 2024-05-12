@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './teclado.component.css'
 })
 export class TecladoComponent {
-  @Input() primeraLetraTexto: string | undefined; // Recibir la primera letra desde TextoComponent
+  @Input() primeraLetraTexto: string | undefined; // Recibir la primera letra
 
 }

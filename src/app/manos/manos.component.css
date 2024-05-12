@@ -31,10 +31,15 @@ div>div>div{
 
 @media screen and (max-width: 700px) {
     div>div>div{
-        width: 22px;
+        width: 40px;
     }
     .manos{
         gap: 10px;
         
+    }
+}
+@media screen and (max-width: 522px) {
+    div>div>div{
+        width: 22px;
     }
 }

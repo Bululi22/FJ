@@ -1,0 +1,44 @@
+.posiciones{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.caja{
+    margin: 10px auto 0px auto;
+    width: 75vw;
+    max-width: 600px;
+    max-height: 75px;
+    color: #eddcc2;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 5px;
+}
+span{
+    width: 5vw;
+}
+.cajaTexto{
+    display: flex;
+    align-items: center;
+    
+    font-size: 45px;
+    font-family: Courier;
+    text-align: center;
+    
+}
+
+.primeraLetra {
+    color: #272727;
+    background-color: #eddcc2;
+    border: solid;
+    min-height: 51px;
+}
+@media screen and (max-width: 700px) {
+    .cajaTexto{
+        font-size: 23px;
+    }
+    .primeraLetra {
+        min-height: 26px;
+    }
+}

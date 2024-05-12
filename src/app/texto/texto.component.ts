@@ -1,33 +1,56 @@
-import { Component, HostListener } from '@angular/core';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { TecladoComponent } from '../teclado/teclado.component';
+import { ManosComponent } from '../manos/manos.component';
 
 @Component({
   selector: 'app-texto',
   standalone: true,
-  imports: [],
   templateUrl: './texto.component.html',
-  styleUrl: './texto.component.css'
+  styleUrls: ['./texto.component.css'],
+  imports: [NgClass, NgFor, NgIf, TecladoComponent, ManosComponent]
 })
-export class TextoComponent {
+export class TextoComponent implements OnInit {
+  //textoBorrado: string = this.generarLetrasAleatorias();
+  textoBorrado: string = "a a a a a a a a a a"
+  textoEnArray: string[] = [];
 
-  textoMostrado: string = "a&nbsp;e&nbsp;i&nbsp;o&nbsp;u";
-  textoBorrado: string = "a e i o u";
+  ngOnInit(): void {
+    this.actualizarTextoMostrado();
+  }
+
+  generarLetrasAleatorias(): string {
+    let frase = '';
+    const caracteres = 'abcdefghijklmnopqrstuvwxyz            ';
+    const longitud = caracteres.length;
+    const numLetras = 10;
+    
+    for (let i = 0; i < numLetras; i++) {
+      const a = Math.floor(Math.random() * longitud);
+      frase += caracteres.charAt(a);
+    }
+    
+    return frase;
+  }
+
+  actualizarTextoMostrado() {
+    this.textoEnArray = this.textoBorrado.split('');
+  }
 
   @HostListener('document:keydown', ['$event'])
   onKeyDown(event: KeyboardEvent) {
-     // Obtener la primera letra del texto a borrar
-     const primeraLetra = this.textoBorrado.charAt(0).toLowerCase();
-    
-     // Obtener la tecla presionada (convertirla a minúsculas para que sea insensible a mayúsculas/minúsculas)
-     const teclaPresionada = event.key.toLowerCase();
+    const primeraLetra = this.textoBorrado.charAt(0).toLowerCase();
+    const teclaPresionada = event.key.toLowerCase();
  
-     // Verificar si la tecla presionada es la misma que la primera letra del texto a borrar
-     if (teclaPresionada === primeraLetra) {
-       // Eliminar la primera letra del texto a borrar
-       this.textoBorrado = this.textoBorrado.substring(1);
+    if (teclaPresionada === primeraLetra) {
+      this.textoBorrado = this.textoBorrado.substring(1);
        
 
-     }
-    console.log(primeraLetra);
+      // Llamar a actualizarTextoMostrado para reflejar los cambios en el array
+      this.actualizarTextoMostrado();
+      console.log("*********")
+      console.log(this.textoEnArray.length)
+      console.log("*********")
+    }
   }
 }
-

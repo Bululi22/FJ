@@ -1,0 +1,32 @@
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    padding: 10px;
+    min-width: 150px;
+    max-width: 500px;
+    margin: auto;
+    height: 230px;
+    
+}
+.tecla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #eddcc2;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #eddcc2;
+    font-weight: bold;
+}
+.tecla-resaltada {
+    color: #272727;
+    background-color: #eddcc2;
+}
+.espacio {
+    grid-column: span 4;
+    min-height: 1em;
+}
+.vacio{
+    grid-column: span 3;
+}

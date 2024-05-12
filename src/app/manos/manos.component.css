@@ -1,0 +1,40 @@
+
+.dedoSeleccionado{
+    background-color: #eddcc2 !important;
+}
+.dedo1{
+    height: 4em;
+}
+.dedo2{
+    height: 6em;
+}
+.dedo3{
+    height: 8em;
+}
+.dedo4{
+    height: 9em;
+}
+div>div>div{
+    width: 40px;
+    background-color: #272727;
+    border: solid #eddcc2;
+    border-radius: 50px 50px 0px 0px;
+}
+.manos, .mano{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.manos{
+    gap: 50px;
+}
+
+@media screen and (max-width: 700px) {
+    div>div>div{
+        width: 22px;
+    }
+    .manos{
+        gap: 10px;
+        
+    }
+}

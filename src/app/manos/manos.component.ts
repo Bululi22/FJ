@@ -9,10 +9,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './manos.component.css'
 })
 export class ManosComponent {
-  @Input() arrayDeTexto: string[] = [];
+  @Input() primeraLetraTexto: string | undefined; // Recibir la primera letra
 
+  //Detecta que dedo tiene que iluminase
   obtenerClaseDedo(d: number): string {
-    let primeraLetra = this.arrayDeTexto[0];
+    let primeraLetra = this.primeraLetraTexto;
     switch (d){
       case 1:{
         if (['q', 'a', 'z'].includes(primeraLetra)) {

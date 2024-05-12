@@ -18,6 +18,7 @@
     cursor: pointer;
     color: #eddcc2;
     font-weight: bold;
+    font-size: 25px;
 }
 .tecla-resaltada {
     color: #272727;
@@ -29,4 +30,9 @@
 }
 .vacio{
     grid-column: span 3;
+}
+@media screen and (max-width: 522px) {
+    .tecla {
+        font-size: 20px;
+    }
 }

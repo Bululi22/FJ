@@ -7,7 +7,7 @@
 }
 .caja{
     margin: 10px auto 0px auto;
-    width: 75vw;
+    width: 600px;
     max-width: 600px;
     max-height: 75px;
     color: #eddcc2;
@@ -16,7 +16,10 @@
     padding: 5px;
 }
 span{
-    width: 5vw;
+    width: 40px;
+}
+p{
+    margin: auto;
 }
 .cajaTexto{
     display: flex;
@@ -32,13 +35,33 @@ span{
     color: #272727;
     background-color: #eddcc2;
     border: solid;
-    min-height: 51px;
+    height: 52px;
 }
 @media screen and (max-width: 700px) {
-    .cajaTexto{
-        font-size: 23px;
+    .caja{
+        width: 500px;
     }
     .primeraLetra {
-        min-height: 26px;
+        height: 46px;
+    }
+    .cajaTexto{
+        font-size: 40px;
+    }
+    span{
+        width: 33px;
+    }
+}
+@media screen and (max-width: 522px) {
+    .caja{
+        width: 283px;
+    }
+    .cajaTexto{
+        font-size: 30px;
+    }
+    .primeraLetra {
+        height: 34px;
+    }
+    span{
+        width: 19px;
     }
 }

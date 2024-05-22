@@ -12,9 +12,9 @@ import { ManosComponent } from '../manos/manos.component';
 })
 export class TextoComponent implements OnInit {
   textoBorrado: string = this.generarLetrasAleatorias();
-  //textoBorrado: string = "aa"
   textoEnArray: string[] = [];
 
+  //Cargar y mostrar texto segun se ejecute la web
   ngOnInit(): void {
     this.actualizarTextoMostrado();
   }

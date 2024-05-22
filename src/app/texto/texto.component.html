@@ -1,26 +1,37 @@
+<!-- Contenedor principal para las posiciones -->
 <div class="posiciones">
     
+    <!-- Caja que contiene el contenido condicional -->
     <div class="caja">
+        <!-- Verifica si el array 'textoEnArray' tiene elementos -->
         @if (textoEnArray.length > 0) {
+            <!-- Si el array tiene elementos, crea un div para mostrar el texto -->
             <div class="cajaTexto" (keydown)="onKeyDown($event)">
+                <!-- Recorre los primeros 15 elementos del array 'textoEnArray' -->
                 <span 
                     *ngFor="let letra of textoEnArray.slice(0, 15); let i=index "
                     [ngClass]="{'primeraLetra': i === 0}"
                 >
+                    <!-- Muestra cada letra -->
                     {{ letra }}
                 </span>
+                <!-- Si el array está vacío, muestra un espacio en blanco -->
                 @if (textoEnArray.length === 0) {
                     <span>&nbsp;</span>
                 }
             </div>
         }
         @else {
+            <!-- Si el array 'textoEnArray' está vacío -->
+            <!-- Muestra un mensaje de completado -->
             <div class="cajaTexto">
                 <p class="primeraLetra">COMPLETADO:)</p>
             </div>
         }
     </div>
     
+    <!-- Componente del teclado, pasando la primera letra del array 'textoEnArray' -->
     <app-teclado [primeraLetraTexto]="textoEnArray[0]"></app-teclado>
+    <!-- Componente de las manos, pasando la primera letra del array 'textoEnArray' -->
     <app-manos [primeraLetraTexto]="textoEnArray[0]"></app-manos>    
 </div>

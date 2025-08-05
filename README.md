@@ -1,27 +1,35 @@
-# ProyectoFJ
+# FJ ⌨️🧠  
+**fj** es una aplicación web creada con **Angular 17** que te entrena en mecanografía mediante texto aleatorio y ayudas visuales. Es ideal para desarrollar memoria muscular y precisión con cada dedo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+---
 
-## Development server
+## 🚀 Características principales
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Texto aleatorio para practicar**  
+  Se genera una secuencia de letras al azar que el usuario debe escribir correctamente.
 
-## Code scaffolding
+- **Guía visual de dedos**  
+  La interfaz muestra qué dedo utilizar para cada tecla, con teclado resaltado y representación de manos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Feedback en tiempo real**  
+  Se compara cada pulsación con el texto objetivo y se muestra al instante si fue correcta o no.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🎨 Diseño y estructura
 
-## Running unit tests
+- Diseño minimalista con **CSS puro**, centrado en claridad y funcionalidad.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Interfaz dividida en tres secciones:  
+  1. Texto objetivo  
+  2. Teclado con resaltado dinámico  
+  3. Representación gráfica de manos para guiar la postura correcta
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🔧 Tecnologías
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Tecnología     | Función principal                          |
+|----------------|---------------------------------------------|
+| Angular 17     | Estructura de componentes y lógica de la app|
+| CSS            | Estilos visuales personalizados             |
